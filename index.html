@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="photo/logo.png" alt="Logo" width="100" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shop">Our Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#brownies">Brownies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#message-us">Message Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero bg-light text-center">
+        <div class="container">
+            <h1>Hi, Welcome To Bronya Website</h1>
+            <p>Sepotong brownies manis terdapat janji manis</p>
+            <p>Happy Shopping~</p>
+            <img src="photo/brosur.png" alt="Image" class="img-fluid mt-1">
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="shop" class="shop text-center py-5">
+        <div class="container">
+            <h2>Our Shop</h2>
+            <div class="row justify-content-center mt-4">
+                <div class="col-6 col-md-4 mb-4 d-flex flex-column align-items-center">
+                    <div class="circle">
+                        <img src="photo/madiun.jpeg" alt="madiun" class="img-fluid">
+                    </div>
+                    <p>Madiun</p>
+                </div>
+                <div class="col-6 col-md-4 mb-4 d-flex flex-column align-items-center">
+                    <div class="circle">
+                        <img src="photo/surabaya.jpg" alt="surabaya" class="img-fluid">
+                    </div>
+                    <p>Surabaya</p>
+                </div>
+                <div class="col-6 col-md-4 mb-4 d-flex flex-column align-items-center">
+                    <div class="circle">
+                        <img src="photo/malang.jpeg" alt="malang" class="img-fluid">
+                    </div>
+                    <p>Malang</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="brownies" class="brownies text-center py-5">
+        <div class="container">
+            <h2>Our Brownies</h2>
+            <div class="row justify-content-center mt-4">
+                <div class="col-6 col-md-4 mb-4 d-flex flex-column align-items-center">
+                    <div class="square">
+                        <img src="photo/blackforest.jpeg" alt="blackforest" class="img-fluid">
+                    </div>
+                    <p>Malang</p>
+                </div>
+                <div class="col-6 col-md-4 mb-4 d-flex flex-column align-items-center">
+                    <div class="square">
+                        <img src="photo/fuggy.jpeg" alt="fuggy" class="img-fluid">
+                    </div>
+                    <p>Malang</p>
+                </div>
+                <div class="col-6 col-md-4 mb-4 d-flex flex-column align-items-center">
+                    <div class="square">
+                        <img src="photo/susu keju.jpeg" alt="susukeju" class="img-fluid">
+                    </div>
+                    <p>Malang</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Us Section -->
+    <section id="message-us" class="message-us py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Message Us</h2>
+            <div class="row">
+                <div class="col-12 col-md-6 mb-4">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="name" placeholder="Nama" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Tanggal Lahir</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Jenis Kelamin</label>
+                            <div>
+                                <input type="radio" id="male" name="gender" value="Laki-Laki" checked>
+                                <label for="male">Laki-Laki</label>
+                                <input type="radio" id="female" name="gender" value="Perempuan">
+                                <label for="female">Perempuan</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Pesan" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="output-box border p-3">
+                        <p>Current Time: <span id="currentTime"></span></p>
+                        <p>Nama: <span id="outputName"></span></p>
+                        <p>Tanggal Lahir: <span id="outputDate"></span></p>
+                        <p>Jenis Kelamin: <span id="outputGender"></span></p>
+                        <p>Pesan: <span id="outputMessage"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>Created By Febrian Nur Jananto</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
